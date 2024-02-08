@@ -1,4 +1,4 @@
-import { View, Text, Image, StatusBar } from "react-native";
+import { View, Text, Image } from "react-native";
 import React from "react";
 import {
   widthPercentageToDP as wp,
@@ -8,12 +8,13 @@ import { LinearGradient } from "expo-linear-gradient";
 import { TouchableOpacity } from "react-native-gesture-handler";
 import Animated, { FadeInDown } from "react-native-reanimated";
 import { useRouter } from "expo-router";
+import { StatusBar } from "expo-status-bar";
 
 const Index = () => {
   const router = useRouter();
   return (
     <View className="flex-1 flex justify-end">
-      <StatusBar barStyle={"light-content"} />
+      <StatusBar style="light" />
       <Image
         className="h-full w-full absolute"
         source={require("../assets/images/welcome.png")}
