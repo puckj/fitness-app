@@ -6,8 +6,11 @@ import {
 } from "react-native-responsive-screen";
 import { LinearGradient } from "expo-linear-gradient";
 import { TouchableOpacity } from "react-native-gesture-handler";
+import Animated, { FadeInDown } from "react-native-reanimated";
+import { useRouter } from "expo-router";
 
 const Index = () => {
+  const router = useRouter();
   return (
     <View className="flex-1 flex justify-end">
       <StatusBar barStyle={"light-content"} />
@@ -22,7 +25,10 @@ const Index = () => {
         end={{ x: 0.5, y: 0.8 }}
         className="flex justify-end pb-12 space-y-8"
       >
-        <View className="flex items-center">
+        <Animated.View
+          entering={FadeInDown.delay(100).springify()}
+          className="flex items-center"
+        >
           <Text
             style={{ fontSize: hp(5) }}
             className="text-white font-bold tracking-wide"
@@ -35,9 +41,10 @@ const Index = () => {
           >
             For you
           </Text>
-        </View>
-        <View>
+        </Animated.View>
+        <Animated.View entering={FadeInDown.delay(200).springify()}>
           <TouchableOpacity
+            onPress={() => router.push("/home")}
             style={{ height: hp(7), width: wp(80) }}
             className="bg-rose-500 flex items-center justify-center mx-auto rounded-full border-[1px] border-neutral-200"
           >
@@ -48,7 +55,7 @@ const Index = () => {
               Get Started
             </Text>
           </TouchableOpacity>
-        </View>
+        </Animated.View>
       </LinearGradient>
     </View>
   );
