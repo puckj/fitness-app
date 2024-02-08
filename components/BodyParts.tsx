@@ -6,8 +6,10 @@ import {
 } from "react-native-responsive-screen";
 import { bodyParts } from "../constants";
 import BodyPartCard from "./BodyPartCard";
+import { useRouter } from "expo-router";
 
 const BodyParts = () => {
+  const router = useRouter();
   return (
     <View className="mx-4">
       <Text
@@ -26,7 +28,7 @@ const BodyParts = () => {
           justifyContent: "space-between",
         }}
         renderItem={({ item, index }) => (
-          <BodyPartCard item={item} index={index} />
+          <BodyPartCard item={item} index={index} router={router}/>
         )}
       />
     </View>
