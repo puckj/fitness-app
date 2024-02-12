@@ -8,6 +8,10 @@ const _layout = () => {
         name="exercises"
         options={{ presentation: "fullScreenModal" }}
       />
+      <Stack.Screen
+        name="exerciseDetails"
+        options={{ presentation: "modal" }}
+      />
     </Stack>
   );
 };

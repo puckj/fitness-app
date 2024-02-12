@@ -1,4 +1,4 @@
-import { View, Text, TouchableOpacity, ScrollView, Image } from "react-native";
+import { View, Text, TouchableOpacity, Image } from "react-native";
 import React, { useEffect, useState } from "react";
 import { useLocalSearchParams, useRouter } from "expo-router";
 import { fetchExercisesByBodypart } from "../api/exerciseDB";
@@ -8,7 +8,8 @@ import {
   heightPercentageToDP as hp,
 } from "react-native-responsive-screen";
 import Ionicons from "react-native-vector-icons/Ionicons";
-import ExercisesList from "../components/ExercisesList";
+import ExerciseList from "../components/ExerciseList";
+import { ScrollView } from "react-native-virtualized-view";
 
 const Exercises = () => {
   const router = useRouter();
@@ -47,7 +48,7 @@ const Exercises = () => {
           {item.name} exercises
         </Text>
         <View className="mb-10">
-          <ExercisesList data={exercises} />
+          <ExerciseList data={exercises} />
         </View>
       </View>
     </ScrollView>

@@ -19,6 +19,7 @@
     "deprecated-react-native-prop-types": "^5.0.0",
     "expo": "~49.0.18",
     "expo-font": "~11.4.0",
+    "expo-image": "~1.3.5",
     "expo-linear-gradient": "~12.3.0",
     "expo-linking": "~5.0.2",
     "expo-router": "^2.0.0",
@@ -37,6 +38,7 @@
     "react-native-screens": "~3.22.0",
     "react-native-snap-carousel": "^3.9.1",
     "react-native-vector-icons": "^10.0.3",
+    "react-native-virtualized-view": "^1.0.0",
     "react-native-web": "~0.19.6"
   },
   "devDependencies": {
