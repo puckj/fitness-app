@@ -9,5 +9,4 @@
 ## Get started
 1. Create .env file 
 2. Install the dependencies by running `yarn install`
-3. Use `npx patch-package` for patching React Native
-4. `yarn expo start`
+3. `yarn expo start`
